@@ -13943,7 +13943,47 @@ megtigen : ##############################################
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="megti">megti<a class="anchor-link" href="#megti">&#182;</a></h3>
+<p>我们可以查看，产生了一个命名为 me_gti.fits 的文件</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/ME//me_gti.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/ME//me_gti.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="megti">megti<a class="anchor-link" href="#megti">&#182;</a></h3><p>使用 megti.py 脚本，可以进一步筛选GTIs。在上一步产生的 GTI 文件的基础上，去除掉粒子本底影响较大的时间段。我们可以使用<code>-h</code>参数查看该脚本的运行方式。</p>
+
 </div>
 </div>
 </div>
@@ -13984,6 +14024,23 @@ Method 2: Using interactive method in prompt.
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这里提供两种输入方式：Method 1 是在命令行按顺序输入 <code>megrade</code> 的输出文件、<code>megtigen</code> 的输出文件，和新的 GTI 文件的文件名；Method 2 是使用交互式运行，在执行 <code>megti</code> 后会提示你输入上述文件。我们以第一种执行方式为例进行演示。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-block alert-info">
+<b>NOTES:</b> 我们在这里提供该脚本，放置在 hxmt_scripts 文件夹下，故执行该脚本的方式为 python megti.py 需要注意的是，通过慧眼的软件下载网页，你能在下载的软件包中获得同样的脚本，不过在安装说明中，你可能已经设置了shell 环境的”别名“，即在shell中运行 megti 命令等效于上述的运行 megti.py 脚本。两种运行方式没有区别，我这里因为 Jupyter 不识别shell的别名，故直接执行python脚本，但本质上二者没有区别。
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14034,9 +14091,17 @@ done
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们可以查看产生的新的 GTI 文件，命名为 me_gti_new.fits</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -1t ./data/ME/me_gti*
@@ -14069,7 +14134,16 @@ done
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="mescreen">mescreen<a class="anchor-link" href="#mescreen">&#182;</a></h3>
+<h3 id="mescreen">mescreen<a class="anchor-link" href="#mescreen">&#182;</a></h3><p>接下来，我们根据 GTIs 可以筛选出该好时间段内的事例。同时我们根据探测器编号、能道、观测时间等做更严格的筛选。根据标定的情况，我们只需要选择所有”小视场“的探测器和”盲探测器“。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们提供了一个 Python 的小工具<code>hprint_detid.py</code>，可以输出所有探测器的编号，我们在筛选之前可以先输出各个探测器的信息，找出我们需要的ME小视场的探测器。</p>
+
 </div>
 </div>
 </div>
@@ -14158,6 +14232,14 @@ LE LARGE FOV information (6x6):
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>可以看到，ME 探测器小视场（small FoV）对应的编号为 0-5, 7, 12-23, 25, 30-41, 43, 48-53。我们可以继续筛选事例。<code>mescreen</code> 有一个输入参数 <code>userdetid</code> 即探测器编号。这个参数的值我们选择所有小视场探测器编号，即盲探测器的编号，<code>userdetid="0-5,7,12-23,25,30-41,43,48-53;10,28,46"</code> 。 <code>mescreen</code> 的具体使用方式如下</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14606,7 +14688,47 @@ mescreen : ##############################################
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="mespecgen">mespecgen<a class="anchor-link" href="#mespecgen">&#182;</a></h3>
+<p>我们输出了一个命名为 me_screen.fits 的FITS文件。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/ME/me_screen.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/ME/me_screen.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="mespecgen">mespecgen<a class="anchor-link" href="#mespecgen">&#182;</a></h3><p>产生能谱文件。我们对 me_screen.fits 文件中事例，产生其能谱。me_screen.fits 中包含了”小视场“探测器的光子以及”盲探测器“的光子，我们产生能谱的时候，只产生”小视场“探测器的光子。在选择探测器时 <code>userdetid="0-5,7,12-23,25,30-41,43,48-53"</code>。注意这里没有“盲探测器”对应的编号 10,28,46</p>
+
 </div>
 </div>
 </div>
@@ -14681,7 +14803,8 @@ mespecgen : ##############################################
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="merspgen">merspgen<a class="anchor-link" href="#merspgen">&#182;</a></h3>
+<h3 id="merspgen">merspgen<a class="anchor-link" href="#merspgen">&#182;</a></h3><p>产生 ME 的响应矩阵</p>
+
 </div>
 </div>
 </div>
@@ -14957,6 +15080,14 @@ lepical : ##############################################
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lerecon">lerecon<a class="anchor-link" href="#lerecon">&#182;</a></h3><p>LE 探测器的事例重建</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
@@ -14994,6 +15125,14 @@ lerecon : ##############################################
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="legtigen">legtigen<a class="anchor-link" href="#legtigen">&#182;</a></h3><p>产生 LE 探测器的好时间(GTIs)文件。我们推荐的好时间为<code>expr="ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;DYE_ELV&gt;40&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04"</code>，注意和 HE 与 ME 的好时间判选条件比起来，多了一个亮地球与卫星指向的夹角(DYE_ELV)大于40度的限制。</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
@@ -15030,6 +15169,68 @@ legtigen : ##############################################
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="legti">legti<a class="anchor-link" href="#legti">&#182;</a></h3><p>类似于 <code>megti</code>，我们在上一步 <code>legtigen</code> 的基础上进一步筛选出好时间段。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>同样，我们可以使用 <code>-h</code> 参数查看输入的参数</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python ./hxmt_scripts/legti.py -h
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>---------- import end ----------
+*********************************************************
+*********************************************************
+*********************************************************
+************ PRINT: legti -h for usage   *************
+*********************************************************
+Method 1: legti lerecon.fits oldgti.fits newgti.fits
+Method 2: Using interactive method in prompt.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>可以看到，我们需要按顺序输入 lerecon 的输出文件、上一步 legtigen 的输出文件，以及产生的新的GTI文件的文件名。</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15087,6 +15288,14 @@ done
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>可以查看，我们现在产生了一个名为 le_gti_new.fits 的好时间段文件</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
@@ -15118,6 +15327,22 @@ done
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lescreen">lescreen<a class="anchor-link" href="#lescreen">&#182;</a></h3><p>筛选出好时间段内的事例</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>同样，我们根据好时间段，筛选出时间段内的事例。类似于 ME 的情况，我们这里只选择“小视场”探测器和“盲探测器”，可以查看之前 <code>hprint_detid.py</code> 输出的内容。LE 探测器的“小视场”和“盲探测器”其编号分别为<code>0,2-4,6-10,12,14,20,22-26,28,30,32,34-36,38-42,44,46,52,54-58,60-62,64,66-68,70-74,76,78,84,86,88-90,92-94</code>和<code>13,45,77,21,53,85</code></p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15223,6 +15448,61 @@ lescreen : ##############################################
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们成功产生了一个名为 le_screen.fits 的FITS文件</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/LE/le_screen.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/LE/le_screen.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lespecgen">lespecgen<a class="anchor-link" href="#lespecgen">&#182;</a></h3><p>产生 LE 探测器的能谱</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们产生能谱时，仅选择小视场探测器，<code>userdetid="0,2-4,6-10,12,14,20,22-26,28,30,32,34-36,38-42,44,46,52,54-58,60-62,64,66-68,70-74,76,78,84,86,88-90,92-94"</code></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
@@ -15258,6 +15538,14 @@ lespecgen : ##############################################
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lerspgen">lerspgen<a class="anchor-link" href="#lerspgen">&#182;</a></h3><p>产生 LE 的响应矩阵</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15351,6 +15639,22 @@ lerspgen : ##############################################
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>至此，我们完成了 HE, ME, LE 全部的数据预处理工作，我们产生了经过筛选的事例文件、能谱文件、响应文件，基于这些我们可以开展我们的数据分析。</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
