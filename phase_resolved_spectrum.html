@@ -13116,20 +13116,2267 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Insight-HXMT-&#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;"><em>Insight</em>-HXMT &#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;<a class="anchor-link" href="#Insight-HXMT-&#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;">&#182;</a></h1><h2 id="&#8212;&#8212;&#27010;&#35272;&#12289;&#25968;&#25454;&#39044;&#22788;&#29702;&#12289;&#35745;&#26102;&#20998;&#26512;&#12289;&#33021;&#35889;&#20998;&#26512;">&#8212;&#8212;&#27010;&#35272;&#12289;&#25968;&#25454;&#39044;&#22788;&#29702;&#12289;&#35745;&#26102;&#20998;&#26512;&#12289;&#33021;&#35889;&#20998;&#26512;<a class="anchor-link" href="#&#8212;&#8212;&#27010;&#35272;&#12289;&#25968;&#25454;&#39044;&#22788;&#29702;&#12289;&#35745;&#26102;&#20998;&#26512;&#12289;&#33021;&#35889;&#20998;&#26512;">&#182;</a></h2><p>庹攸隶(tuoyl@ihep.ac.cn)</p>
-<h5 id="&#30446;&#26631;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425;-Crab-&#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983;-Crab-&#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;">&#30446;&#26631;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425; Crab &#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983; Crab &#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;<a class="anchor-link" href="#&#30446;&#26631;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425;-Crab-&#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983;-Crab-&#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;">&#182;</a></h5>
+<h1 id="Insight-HXMT-&#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;"><em>Insight</em>-HXMT &#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;<a class="anchor-link" href="#Insight-HXMT-&#30456;&#20301;&#20998;&#35299;&#35889;&#22788;&#29702;&#31034;&#20363;">&#182;</a></h1><h2 id="&#8212;&#8212;&#27010;&#35272;&#12289;&#25968;&#25454;&#39044;&#22788;&#29702;&#12289;&#35745;&#26102;&#20998;&#26512;&#12289;&#33021;&#35889;&#20998;&#26512;">&#8212;&#8212;<a href="#&#27010;&#35272;">&#27010;&#35272;</a>&#12289;<a href="#&#25968;&#25454;&#39044;&#22788;&#29702;">&#25968;&#25454;&#39044;&#22788;&#29702;</a>&#12289;<a href="#&#35745;&#26102;&#20998;&#26512;">&#35745;&#26102;&#20998;&#26512;</a>&#12289;<a href="#&#33021;&#35889;&#20998;&#26512;">&#33021;&#35889;&#20998;&#26512;</a><a class="anchor-link" href="#&#8212;&#8212;&#27010;&#35272;&#12289;&#25968;&#25454;&#39044;&#22788;&#29702;&#12289;&#35745;&#26102;&#20998;&#26512;&#12289;&#33021;&#35889;&#20998;&#26512;">&#182;</a></h2><p>庹攸隶(tuoyl@ihep.ac.cn)</p>
+<h5 id="&#26368;&#32456;&#32467;&#26524;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425;-Crab-&#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983;-Crab-&#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;">&#26368;&#32456;&#32467;&#26524;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425; Crab &#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983; Crab &#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;<a class="anchor-link" href="#&#26368;&#32456;&#32467;&#26524;&#65306;&#20351;&#29992;&#24935;&#30524;&#19968;&#27425;-Crab-&#30340;&#35266;&#27979;&#25968;&#25454;&#65292;&#20135;&#29983;-Crab-&#33033;&#20914;&#26143;&#30340;&#30456;&#20301;&#20998;&#35299;&#35889;">&#182;</a></h5>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#27010;&#35272;">&#27010;&#35272;<a class="anchor-link" href="#&#27010;&#35272;">&#182;</a></h2><ul>
-<li>使用慧眼用户处理软件(HXMTDAS v2.01)产生数据产品</li>
-<li>使用 Crab 的星历(ephemeris)产生 Crab 的脉冲轮廓</li>
-<li>对轮廓分成多个相位区间，得到各个区间的能谱及背景能谱</li>
+<h2 id="&#27010;&#35272;">&#27010;&#35272;<a class="anchor-link" href="#&#27010;&#35272;">&#182;</a></h2><h3 id="&#20934;&#22791;&#24037;&#20316;">&#20934;&#22791;&#24037;&#20316;<a class="anchor-link" href="#&#20934;&#22791;&#24037;&#20316;">&#182;</a></h3><p>该 Jupyter 文本使用 Python3 环境，若想执行以下所有命令，需要如下操作：</p>
+<ul>
+<li>安装并初始化 HXMTDAS 环境（例如能在终端中运行<code>hepical</code>命令）</li>
+<li>使用 Python3.* 版本，并安装有 astropy, numpy, matplotlib 模块
+  （若使用 conda 环境，请在 environment.yml 文件所在路径执行 <code>conda env create -f environment.yml</code> 安装名为 hxmt_analysis 的环境，然后执行 <code>conda activate hxmt_analysis</code><div class="alert alert-block alert-info">
+<b>NOTES
+  :</b> 该介绍中涉及到的命令，你可以在 Jupyter 中使用 Shift+Enter 逐条执行。你同时完全可以在终端中执行所有命令。
+</div></li>
+</ul>
+<h3 id="&#30446;&#26631;">&#30446;&#26631;<a class="anchor-link" href="#&#30446;&#26631;">&#182;</a></h3><ul>
+<li><strong>数据预处理</strong>：使用慧眼用户处理软件（HXMTDAS v2.01）产生用于分析的数据产品</li>
+<li><strong>计时分析</strong>：使用 Crab 的星历（ephemeris）产生 Crab 的脉冲轮廓</li>
+<li><strong>能谱分析</strong>：对轮廓分成多个相位区间，得到各个区间的能谱及背景能谱</li>
 </ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25968;&#25454;&#39044;&#22788;&#29702;">&#25968;&#25454;&#39044;&#22788;&#29702;<a class="anchor-link" href="#&#25968;&#25454;&#39044;&#22788;&#29702;">&#182;</a></h2><p>数据预处理针对三个载荷高能、中能和低等载荷，分别是：</p>
+<ul>
+<li><a href="#高能载荷(HE">高能载荷(HE)数据处理</a>数据处理)</li>
+<li><a href="#中能载荷(ME">中能载荷(ME)数据处理</a>数据处理)</li>
+<li><a href="#低能载荷(LE">低能载荷(LE)数据处理</a>数据处理)</li>
+</ul>
+<h3 id="&#39640;&#33021;&#36733;&#33655;(HE)&#25968;&#25454;&#22788;&#29702;">&#39640;&#33021;&#36733;&#33655;(HE)&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#&#39640;&#33021;&#36733;&#33655;(HE)&#25968;&#25454;&#22788;&#29702;">&#182;</a></h3><h3 id="hepical">hepical<a class="anchor-link" href="#hepical">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>hepical <span class="nv">evtfile</span><span class="o">=</span>./data/HE/HXMT_P010129900101_HE-Evt_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/HE/he_pi.fits <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hepical : ##############################################
+hepical : HXMT HE task, hepical is running
+hepical : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+hepical : PILParSet Warning: the file ./data/HE/he_pi.fits will be overwritten!
+hepical : HxmtCaldb Error: There are not files that satisfied the selection criteria!
+hepical : HxmtCaldb Error: &#39;Telescope&#39; HXMT &#39;instrument&#39; HE &#39;detname&#39; NONE &#39;filter&#39; NONE &#39;codename&#39; CHAN2PI_0&#39; 
+hepical : hepical: Error: Unable to get &#39;gain (codename:CHAN2PI_0)&#39; file named &#39;&#39;!
+hepical : HXMT HE task, hepical is running unsuccessfully!
+hepical : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-block alert-warning">
+<b>NOTES:</b> 若出现报错 hepical : hepical: Error: Unable to get 'gain (codename:CHAN2PI_0)' file named ''! 则根据 CALDB 中 gainfile 的路径手动指定，执行如下命令。
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>hepical <span class="nv">evtfile</span><span class="o">=</span>./data/HE/HXMT_P010129900101_HE-Evt_FFFFFF_V1_L1P.FITS <span class="nv">gainfile</span><span class="o">=</span>/Users/tuoyouli/Documents/hxmtsoft_newtest/CALDB/data/hxmt/he/bcf/hxmt_he_gain_20171030_v1.fits <span class="nv">outfile</span><span class="o">=</span>./data/HE/he_pi.fits <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hepical : ##############################################
+hepical : HXMT HE task, hepical is running
+[####################################################################################################][100%]
+hepical : HXMT HE task, all events from raw evt file is 145630697!
+hepical : HXMT HE task, glitch removal events is 636135!
+hepical : HXMT HE task, hepical is running successfully!
+hepical : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>运行该命令根据不同的计算机性能，通常会占用你2-3分钟的时间。输出产生一个新的事例文件，命名为 he_pi.fits。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -trl ./data/HE/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>total 9658648
+-rwx------  1 tuoyouli  staff     1143360 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-HV_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff      469440 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-DTime_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff      109440 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-PM_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff     1673280 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-TH_FFFFFF_V1_L1P.FITS</span>
+-rw-r--r--  1 tuoyouli  staff  2330262720 Aug 19 15:31 HXMT_P010129900101_HE-Evt_FFFFFF_V1_L1P.FITS
+-rwx------  1 tuoyouli  staff      149760 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-InsStat_FFFFFF_V1_L1P.FITS</span>
+-rw-r--r--  1 tuoyouli  staff  2610072000 Aug 19 20:18 he_pi.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="hegtigen">hegtigen<a class="anchor-link" href="#hegtigen">&#182;</a></h3><p>生成 HE 载荷的好时间文件（GTIs）</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>hegtigen <span class="nv">hvfile</span><span class="o">=</span>./data/HE/HXMT_P010129900101_HE-HV_FFFFFF_V1_L1P.FITS <span class="nv">tempfile</span><span class="o">=</span>./data/HE/HXMT_P010129900101_HE-TH_FFFFFF_V1_L1P.FITS <span class="nv">ehkfile</span><span class="o">=</span>./data/AUX/HXMT_P010129900101_HE-EHK_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/HE/he_gti.fits <span class="nv">defaultexpr</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span> <span class="nv">expr</span><span class="o">=</span><span class="s2">&quot;ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hegtigen : ##############################################
+hegtigen : HXMT HE task, hegtigen is running
+hegtigen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+hegtigen : PILParSet Warning: the file ./data/HE/he_gti.fits will be overwritten!
+hegtigen : HXMT HE task, hegtigen is running successfully!
+hegtigen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们推荐的对于涉及到能谱分析的好时间判选条件为<code>ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04</code>。
+同样的，你可以查看输出文件，我们这一步产生了一个命名为 he_gti.fits 的 FITS 文件。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -trl ./data/HE/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>total 9658688
+-rwx------  1 tuoyouli  staff     1143360 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-HV_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff      469440 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-DTime_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff      109440 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-PM_FFFFFF_V1_L1P.FITS</span>
+-rwx------  1 tuoyouli  staff     1673280 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-TH_FFFFFF_V1_L1P.FITS</span>
+-rw-r--r--  1 tuoyouli  staff  2330262720 Aug 19 15:31 HXMT_P010129900101_HE-Evt_FFFFFF_V1_L1P.FITS
+-rwx------  1 tuoyouli  staff      149760 Aug 19 15:31 <span class="ansi-red-fg">HXMT_P010129900101_HE-InsStat_FFFFFF_V1_L1P.FITS</span>
+-rw-r--r--  1 tuoyouli  staff  2610072000 Aug 19 20:18 he_pi.fits
+-rw-r--r--  1 tuoyouli  staff       17280 Aug 19 20:19 he_gti.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="hescreen">hescreen<a class="anchor-link" href="#hescreen">&#182;</a></h3><p>根据 GTIs 选择出符合要求的好事例</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>hescreen <span class="nv">evtfile</span><span class="o">=</span>./data/HE/he_pi.fits <span class="nv">gtifile</span><span class="o">=</span>./data/HE/he_gti.fits <span class="nv">outfile</span><span class="o">=</span>./data/HE/he_screen.fits <span class="nv">userdetid</span><span class="o">=</span><span class="m">0</span>-17 <span class="nv">minPI</span><span class="o">=</span><span class="m">0</span> <span class="nv">maxPI</span><span class="o">=</span><span class="m">255</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hescreen : ##############################################
+hescreen : HXMT HE task, hescreen is running
+hescreen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+hescreen : PILParSet Warning: the file ./data/HE/he_screen.fits will be overwritten!
+hescreen : hescreen: User detector selection:
+hescreen : HxmtBadDetector Info: there is no bad detector!
+[####################################################################################################][100%]
+hescreen : HEScreen task: 
+hescreen : Detector ID &#39;0&#39; has event number :237400
+hescreen : Detector ID &#39;1&#39; has event number :244273
+hescreen : Detector ID &#39;2&#39; has event number :263201
+hescreen : Detector ID &#39;3&#39; has event number :247841
+hescreen : Detector ID &#39;4&#39; has event number :236576
+hescreen : Detector ID &#39;5&#39; has event number :242721
+hescreen : Detector ID &#39;6&#39; has event number :252674
+hescreen : Detector ID &#39;7&#39; has event number :237050
+hescreen : Detector ID &#39;8&#39; has event number :261260
+hescreen : Detector ID &#39;9&#39; has event number :272592
+hescreen : Detector ID &#39;10&#39; has event number :230527
+hescreen : Detector ID &#39;11&#39; has event number :235224
+hescreen : Detector ID &#39;12&#39; has event number :238701
+hescreen : Detector ID &#39;13&#39; has event number :231849
+hescreen : Detector ID &#39;14&#39; has event number :223936
+hescreen : Detector ID &#39;15&#39; has event number :232500
+hescreen : Detector ID &#39;16&#39; has event number :91033
+hescreen : Detector ID &#39;17&#39; has event number :234191
+hescreen : HXMT HE task, hescreen is running successfully!
+hescreen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>运行 hescreen 命令大约会占用你1分钟时间，输出文件为 he_screen.fits。我们这里选择了探测器编号0-17，即全选，选择了能道0-255，也是全选。如果你选择产生不同能段的光子，则可以修改 minPI 和 maxPI 的值。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="hespecgen">hespecgen<a class="anchor-link" href="#hespecgen">&#182;</a></h3><p>生成能谱文件（spectra）</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>hespecgen <span class="nv">evtfile</span><span class="o">=</span>./data/HE/he_screen.fits <span class="nv">outfile</span><span class="o">=</span>./data/HE/he_spec <span class="nv">deadfile</span><span class="o">=</span>./data/HE/HXMT_P010129900101_HE-DTime_FFFFFF_V1_L1P.FITS <span class="nv">userdetid</span><span class="o">=</span><span class="s2">&quot;0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17&quot;</span> <span class="nv">starttime</span><span class="o">=</span><span class="m">0</span> <span class="nv">stoptime</span><span class="o">=</span><span class="m">0</span> <span class="nv">minPI</span><span class="o">=</span><span class="m">0</span> <span class="nv">maxPI</span><span class="o">=</span><span class="m">255</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hespecgen : HXMT HE task, hespecgen is running
+hespecgen : hespecgen: User detector selection:
+[####################################################################################################][100%]
+hespecgen : HXMT HE task, hespecgen is running successfully!
+hespecgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们在这一步生成了 HE 的18个探测器的能谱，通过 userdetid 参数选择探测器。使用分号(;)将各个探测器编号做分割，使我们产生了18个能谱，而不是18个探测器的总能谱。可以查看一下我们产生的结果，是18个以<code>he_spec</code>为前缀的<code>.pha</code>文件。能谱的结果可以在<a href="#能谱分析">能谱分析</a>一节查看，这里暂不做展开。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -tr ./data/HE/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>HXMT_P010129900101_HE-HV_FFFFFF_V1_L1P.FITS	  he_spec_g4_4.pha
+HXMT_P010129900101_HE-DTime_FFFFFF_V1_L1P.FITS	  he_spec_g3_3.pha
+he_pi.fits					  he_spec_g2_2.pha
+he_gti.fits					  he_spec_g17_17.pha
+HXMT_P010129900101_HE-PM_FFFFFF_V1_L1P.FITS	  he_spec_g16_16.pha
+he_screen.fits					  he_spec_g15_15.pha
+HXMT_P010129900101_HE-TH_FFFFFF_V1_L1P.FITS	  he_spec_g14_14.pha
+HXMT_P010129900101_HE-InsStat_FFFFFF_V1_L1P.FITS  he_spec_g13_13.pha
+HXMT_P010129900101_HE-Evt_FFFFFF_V1_L1P.FITS	  he_spec_g12_12.pha
+he_spec_g9_9.pha				  he_spec_g1_1.pha
+he_spec_g8_8.pha				  he_spec_g11_11.pha
+he_spec_g7_7.pha				  he_spec_g10_10.pha
+he_spec_g6_6.pha				  he_spec_g0_0.pha
+he_spec_g5_5.pha
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-block alert-info">
+<b>NOTES:</b> 我们之所以要产生18个能谱而不是一个总谱，是由于各个探测器的响应矩阵不一样，我们在之后会根据各个探测器的能谱产生其各自的响应（盲探测器不产生）。最后可以使用脚本 hhe_spec2pi 将能谱和响应矩阵合并。
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/HE/he_spec*.pha <span class="p">|</span> sort -V &gt; ./data/HE/he_spec.txt
+<span class="o">!</span>cat ./data/HE/he_spec.txt
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/HE/he_spec_g0_0.pha
+./data/HE/he_spec_g1_1.pha
+./data/HE/he_spec_g2_2.pha
+./data/HE/he_spec_g3_3.pha
+./data/HE/he_spec_g4_4.pha
+./data/HE/he_spec_g5_5.pha
+./data/HE/he_spec_g6_6.pha
+./data/HE/he_spec_g7_7.pha
+./data/HE/he_spec_g8_8.pha
+./data/HE/he_spec_g9_9.pha
+./data/HE/he_spec_g10_10.pha
+./data/HE/he_spec_g11_11.pha
+./data/HE/he_spec_g12_12.pha
+./data/HE/he_spec_g13_13.pha
+./data/HE/he_spec_g14_14.pha
+./data/HE/he_spec_g15_15.pha
+./data/HE/he_spec_g16_16.pha
+./data/HE/he_spec_g17_17.pha
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="herspgen">herspgen<a class="anchor-link" href="#herspgen">&#182;</a></h3><p>产生除盲探测器外，所有探测器各自的响应矩阵</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">phalist</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data/HE/he_spec.txt&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">phafile</span><span class="p">,</span><span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phalist</span><span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">18</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">16</span><span class="p">:</span><span class="k">continue</span> <span class="c1"># 16号盲探测器不产生响应矩阵</span>
+    <span class="n">herspgen_text</span> <span class="o">=</span> <span class="s2">&quot;herspgen phafile=</span><span class="si">%s</span><span class="s2"> outfile=./data/HE/he_rsp_g</span><span class="si">%s</span><span class="s2">.fits attfile=</span><span class="si">%s</span><span class="s2"> ra=-1 dec=-91 clobber=yes&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">phafile</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s2">&quot;./data/ACS/HXMT_P010129900101_Att_FFFFFF_V1_L1P.FITS&quot;</span><span class="p">)</span>
+    <span class="o">!{</span>herspgen_text<span class="o">}</span>
+<span class="n">phalist</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;0&#39;  is 0.985351 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;1&#39;  is 0.980126 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;2&#39;  is 0.995052 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;3&#39;  is 0.980126 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;4&#39;  is 0.985351 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;5&#39;  is 0.988759 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;6&#39;  is 0.988759 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;7&#39;  is 0.985351 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;8&#39;  is 0.980126 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;9&#39;  is 0.99474 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;10&#39;  is 0.988759 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;11&#39;  is 0.980126 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;12&#39;  is 0.980126 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;13&#39;  is 0.988759 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;14&#39;  is 0.985351 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;15&#39;  is 0.988759 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+herspgen : HXMT HE task, herspgen is running
+herspgen : HERspGen: Attitude and Alignment correction of detector &#39;17&#39;  is 0.985351 !
+herspgen : HXMT HE task, herspgen is running successfully!
+herspgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们产生了17个探测器的响应矩阵。可以查看产生的结果</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -tr ./data/HE//he_rsp*
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/HE//he_rsp_g0.fits  ./data/HE//he_rsp_g9.fits
+./data/HE//he_rsp_g1.fits  ./data/HE//he_rsp_g10.fits
+./data/HE//he_rsp_g2.fits  ./data/HE//he_rsp_g11.fits
+./data/HE//he_rsp_g3.fits  ./data/HE//he_rsp_g12.fits
+./data/HE//he_rsp_g4.fits  ./data/HE//he_rsp_g13.fits
+./data/HE//he_rsp_g5.fits  ./data/HE//he_rsp_g14.fits
+./data/HE//he_rsp_g6.fits  ./data/HE//he_rsp_g15.fits
+./data/HE//he_rsp_g7.fits  ./data/HE//he_rsp_g17.fits
+./data/HE//he_rsp_g8.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#20013;&#33021;&#36733;&#33655;(ME)&#25968;&#25454;&#22788;&#29702;">&#20013;&#33021;&#36733;&#33655;(ME)&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#&#20013;&#33021;&#36733;&#33655;(ME)&#25968;&#25454;&#22788;&#29702;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="mepical">mepical<a class="anchor-link" href="#mepical">&#182;</a></h3><p>ME 探测器的 Pulse Invariance CALibration。
+输入的两个文件，<code>evtfile=</code> 输入的是原始的事例文件（文件名的关键字是<code>ME-Evt</code>），<code>tempfile</code> 是温度文件（文件名的关键字是<code>ME-TH</code>）</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>mepical <span class="nv">evtfile</span><span class="o">=</span>./data/ME/HXMT_P010129900101_ME-Evt_FFFFFF_V1_L1P.FITS <span class="nv">tempfile</span><span class="o">=</span>./data/ME/HXMT_P010129900101_ME-TH_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_pi.fits <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mepical : ##############################################
+mepical : HXMT ME task, mepical is running
+[####################################################################################################][100%]
+mepical : HXMT ME task, mepical is running successfully!
+mepical : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我们可以查看新产生的文件</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -l ./data/ME/me_pi.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-rw-r--r--  1 tuoyouli  staff  2267202240 Aug 23 21:29 ./data/ME/me_pi.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="megrade">megrade<a class="anchor-link" href="#megrade">&#182;</a></h3><p>对 ME 的事例进行分级，并挑选“单分裂”事例。同时可以产生 ME 的死时间文件。<code>evtfile</code> 是输入的文件名，该文件是上一步 <code>mepical</code> 输出产生的文件。<code>outfile</code> 和 <code>deadfile</code> 分别为输出的完成事例挑选的文件名和输出的死时间文件的文件名。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>megrade <span class="nv">evtfile</span><span class="o">=</span>./data/ME/me_pi.fits <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_grade.fits <span class="nv">deadfile</span><span class="o">=</span>./data/ME/me_dtime.fits <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>megrade : ##############################################
+megrade : HXMT ME task, megrade is running
+[####################################################################################################][100%]
+megrade : HXMT ME task, megrade is running successfully!
+megrade : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="megtigen">megtigen<a class="anchor-link" href="#megtigen">&#182;</a></h3><p>产生 ME 探测器对应的好时间文件。好时间的判选条件和 HE 的选择条件相同，为<code>ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>megtigen <span class="nv">tempfile</span><span class="o">=</span>./data/ME/HXMT_P010129900101_ME-TH_FFFFFF_V1_L1P.FITS <span class="nv">ehkfile</span><span class="o">=</span>./data/AUX/HXMT_P010129900101_HE-EHK_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_gti.fits <span class="nv">defaultexpr</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span> <span class="nv">expr</span><span class="o">=</span><span class="s2">&quot;ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>megtigen : ##############################################
+megtigen : HXMT ME task, megtigen is running
+megtigen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+megtigen : PILParSet Warning: the file ./data/ME/me_gti.fits will be overwritten!
+megtigen : HXMT ME task, megtigen is running successfully!
+megtigen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="megti">megti<a class="anchor-link" href="#megti">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python ./hxmt_scripts/megti.py -h
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;----------&#39;, &#39;import end&#39;, &#39;----------&#39;)
+*********************************************************
+*********************************************************
+*********************************************************
+************ PRINT: megti -h for usage   *************
+*********************************************************
+Method 1: megti megrade.fits oldgti.fits newgti.fits
+Method 2: Using interactive method in prompt.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python ./hxmt_scripts/megti.py ./data/ME/me_grade.fits ./data/ME/me_gti.fits ./data/ME/me_gti_new.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;----------&#39;, &#39;import end&#39;, &#39;----------&#39;)
+*********************************************************
+*********************************************************
+*********************************************************
+************ PRINT: megti -h for usage   *************
+*********************************************************
+(array([1.78432393e+08, 1.78433313e+08, 1.78433360e+08, 1.78433467e+08,
+       1.78438215e+08, 1.78439098e+08, 1.78439107e+08, 1.78439111e+08,
+       1.78439115e+08, 1.78444099e+08]), array([1.78433299e+08, 1.78433340e+08, 1.78433419e+08, 1.78433780e+08,
+       1.78439097e+08, 1.78439106e+08, 1.78439109e+08, 1.78439113e+08,
+       1.78439462e+08, 1.78444844e+08]))
+chooseing the gradedata in the input gtifile
+(29385504, 29385504)
+(&#39;median==&#39;, -31.215000000000032)
+(&#39;loop1&#39;, &#39;median=&#39;, -31.215000000000032, &#39;Dmedian=&#39;, 1000031.215)
+(&#39;median==&#39;, -31.215000000000032)
+(&#39;loop2&#39;, &#39;median=&#39;, -31.215000000000032, &#39;Dmedian=&#39;, 0.0)
+[904.  58. 312. 881. 346. 521. 212.]
+done
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -1t ./data/ME/me_gti*
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/ME/me_gti_new.fits
+./data/ME/me_gti.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="mescreen">mescreen<a class="anchor-link" href="#mescreen">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python ./hxmt_scripts/hprint_detid.py 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>*********** Detector ID catalogue ***********
+--------------------------
+--------------------------
+
+HE detector ID for SMALL FOV (5.7x1.1):
+0, 1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17
+
+HE BLIND detector ID:
+16
+
+HE SMALL FOV information (5.7x1.1):
+FOV   0: 1, 3, 8, 11, 12
+FOV -60: 0, 4, 7,  9, 14, 17
+FOV +60: 2, 5, 6, 10, 13, 15
+
+HE LARGE FOV information (5.7x5.7):
+2, 9
+--------------------------
+--------------------------
+
+ME ASIC ID for SMALL FOV (1x4):
+0-5, 7, 12-23, 25, 30-41, 43, 48-53
+
+ME BLIND ASIC ID:
+10, 28, 46
+
+ME ASIC ID with calibration source:
+6, 11, 24, 29, 42, 47
+
+ME SMALL FOV information (1x4):
+FOV 0:   0-5,  7, 12-17
+FOV 1: 18-23, 25, 30-35
+FOV 2: 36-41, 43, 48-53
+
+ME LARGE FOV information (4x4):
+8, 9, 26, 27, 44, 45
+--------------------------
+--------------------------
+
+LE detector ID for SMALL FOV (1.6x6):
+0,2-4,6-10,12,14,20,22-26,28,30,32,34-36,38-42,44,46,52,54-58,60-62,64,66-68,70-74,76,78,84,86,88-90,92-94
+
+LE BLIND detector ID for SMALL FOV:
+13, 45, 77
+
+LE BLIND detector ID for LARGE FOV (calibration source):
+21, 53, 85
+
+LE SMALL FOV information (1.6x6):
+FOV 0:  0,  2-4, 6-10,12,14,20,22-26,28-30
+FOV 1: 32,34-36,38-42,44,46,52,54-58,60-62
+FOV 2: 64,66-68,70-74,76,78,84,86-90,92-94
+
+LE LARGE FOV information (6x6):
+1,5,11,15,27,31,33,37,43,47,59,63,65,69,75,79,91,95
+--------------------------
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>mescreen <span class="nv">evtfile</span><span class="o">=</span>./data/ME/me_grade.fits <span class="nv">gtifile</span><span class="o">=</span>./data/ME/me_gti.fits <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_screen.fits <span class="nv">userdetid</span><span class="o">=</span><span class="s2">&quot;0-5,7,12-23,25,30-41,43,48-53;10,28,46&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mescreen : ##############################################
+mescreen : HXMT ME task, mescreen is running
+mescreen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+mescreen : PILParSet Warning: the file ./data/ME/me_screen.fits will be overwritten!
+mescreen : mescreen: User detector selection:
+mescreen : Bad (Bad,hot,flickening) detector List:
+mescreen :        ID:  1
+mescreen :        ID:  6
+mescreen :        ID:  8
+mescreen :        ID:  9
+mescreen :        ID:  14
+mescreen :        ID:  15
+mescreen :        ID:  16
+mescreen :        ID:  17
+mescreen :        ID:  18
+mescreen :        ID:  19
+mescreen :        ID:  20
+mescreen :        ID:  28
+mescreen :        ID:  30
+mescreen :        ID:  31
+mescreen :        ID:  32
+mescreen :        ID:  33
+mescreen :        ID:  48
+mescreen :        ID:  96
+mescreen :        ID:  97
+mescreen :        ID:  161
+mescreen :        ID:  186
+mescreen :        ID:  187
+mescreen :        ID:  188
+mescreen :        ID:  189
+mescreen :        ID:  190
+mescreen :        ID:  191
+mescreen :        ID:  192
+mescreen :        ID:  193
+mescreen :        ID:  194
+mescreen :        ID:  195
+mescreen :        ID:  196
+mescreen :        ID:  197
+mescreen :        ID:  199
+mescreen :        ID:  225
+mescreen :        ID:  249
+mescreen :        ID:  250
+mescreen :        ID:  251
+mescreen :        ID:  252
+mescreen :        ID:  253
+mescreen :        ID:  254
+mescreen :        ID:  255
+mescreen :        ID:  288
+mescreen :        ID:  289
+mescreen :        ID:  345
+mescreen :        ID:  346
+mescreen :        ID:  347
+mescreen :        ID:  348
+mescreen :        ID:  349
+mescreen :        ID:  350
+mescreen :        ID:  351
+mescreen :        ID:  352
+mescreen :        ID:  353
+mescreen :        ID:  354
+mescreen :        ID:  355
+mescreen :        ID:  356
+mescreen :        ID:  357
+mescreen :        ID:  358
+mescreen :        ID:  374
+mescreen :        ID:  375
+mescreen :        ID:  411
+mescreen :        ID:  412
+mescreen :        ID:  413
+mescreen :        ID:  414
+mescreen :        ID:  415
+mescreen :        ID:  417
+mescreen :        ID:  427
+mescreen :        ID:  436
+mescreen :        ID:  437
+mescreen :        ID:  438
+mescreen :        ID:  439
+mescreen :        ID:  446
+mescreen :        ID:  447
+mescreen :        ID:  457
+mescreen :        ID:  460
+mescreen :        ID:  461
+mescreen :        ID:  462
+mescreen :        ID:  476
+mescreen :        ID:  477
+mescreen :        ID:  480
+mescreen :        ID:  481
+mescreen :        ID:  483
+mescreen :        ID:  545
+mescreen :        ID:  589
+mescreen :        ID:  590
+mescreen :        ID:  591
+mescreen :        ID:  592
+mescreen :        ID:  593
+mescreen :        ID:  608
+mescreen :        ID:  609
+mescreen :        ID:  610
+mescreen :        ID:  611
+mescreen :        ID:  613
+mescreen :        ID:  616
+mescreen :        ID:  618
+mescreen :        ID:  619
+mescreen :        ID:  623
+mescreen :        ID:  632
+mescreen :        ID:  633
+mescreen :        ID:  634
+mescreen :        ID:  635
+mescreen :        ID:  640
+mescreen :        ID:  641
+mescreen :        ID:  642
+mescreen :        ID:  643
+mescreen :        ID:  644
+mescreen :        ID:  645
+mescreen :        ID:  646
+mescreen :        ID:  654
+mescreen :        ID:  655
+mescreen :        ID:  656
+mescreen :        ID:  664
+mescreen :        ID:  665
+mescreen :        ID:  667
+mescreen :        ID:  668
+mescreen :        ID:  669
+mescreen :        ID:  670
+mescreen :        ID:  671
+mescreen :        ID:  672
+mescreen :        ID:  673
+mescreen :        ID:  674
+mescreen :        ID:  675
+mescreen :        ID:  677
+mescreen :        ID:  696
+mescreen :        ID:  697
+mescreen :        ID:  698
+mescreen :        ID:  699
+mescreen :        ID:  700
+mescreen :        ID:  701
+mescreen :        ID:  702
+mescreen :        ID:  703
+mescreen :        ID:  736
+mescreen :        ID:  737
+mescreen :        ID:  743
+mescreen :        ID:  764
+mescreen :        ID:  765
+mescreen :        ID:  766
+mescreen :        ID:  767
+mescreen :        ID:  768
+mescreen :        ID:  769
+mescreen :        ID:  770
+mescreen :        ID:  771
+mescreen :        ID:  772
+mescreen :        ID:  773
+mescreen :        ID:  801
+mescreen :        ID:  826
+mescreen :        ID:  827
+mescreen :        ID:  828
+mescreen :        ID:  829
+mescreen :        ID:  830
+mescreen :        ID:  831
+mescreen :        ID:  864
+mescreen :        ID:  865
+mescreen :        ID:  866
+mescreen :        ID:  867
+mescreen :        ID:  872
+mescreen :        ID:  873
+mescreen :        ID:  880
+mescreen :        ID:  881
+mescreen :        ID:  882
+mescreen :        ID:  890
+mescreen :        ID:  891
+mescreen :        ID:  892
+mescreen :        ID:  893
+mescreen :        ID:  894
+mescreen :        ID:  895
+mescreen :        ID:  908
+mescreen :        ID:  909
+mescreen :        ID:  916
+mescreen :        ID:  917
+mescreen :        ID:  918
+mescreen :        ID:  919
+mescreen :        ID:  922
+mescreen :        ID:  923
+mescreen :        ID:  924
+mescreen :        ID:  925
+mescreen :        ID:  926
+mescreen :        ID:  927
+mescreen :        ID:  928
+mescreen :        ID:  929
+mescreen :        ID:  930
+mescreen :        ID:  931
+mescreen :        ID:  932
+mescreen :        ID:  933
+mescreen :        ID:  947
+mescreen :        ID:  986
+mescreen :        ID:  987
+mescreen :        ID:  988
+mescreen :        ID:  989
+mescreen :        ID:  990
+mescreen :        ID:  991
+mescreen :        ID:  992
+mescreen :        ID:  993
+mescreen :        ID:  995
+mescreen :        ID:  1002
+mescreen :        ID:  1003
+mescreen :        ID:  1028
+mescreen :        ID:  1029
+mescreen :        ID:  1030
+mescreen :        ID:  1031
+mescreen :        ID:  1052
+mescreen :        ID:  1053
+mescreen :        ID:  1056
+mescreen :        ID:  1057
+mescreen :        ID:  1067
+mescreen :        ID:  1068
+mescreen :        ID:  1069
+mescreen :        ID:  1070
+mescreen :        ID:  1071
+mescreen :        ID:  1082
+mescreen :        ID:  1083
+mescreen :        ID:  1088
+mescreen :        ID:  1119
+mescreen :        ID:  1120
+mescreen :        ID:  1121
+mescreen :        ID:  1124
+mescreen :        ID:  1125
+mescreen :        ID:  1126
+mescreen :        ID:  1127
+mescreen :        ID:  1140
+mescreen :        ID:  1141
+mescreen :        ID:  1151
+mescreen :        ID:  1160
+mescreen :        ID:  1161
+mescreen :        ID:  1183
+mescreen :        ID:  1185
+mescreen :        ID:  1200
+mescreen :        ID:  1201
+mescreen :        ID:  1240
+mescreen :        ID:  1241
+mescreen :        ID:  1248
+mescreen :        ID:  1249
+mescreen :        ID:  1252
+mescreen :        ID:  1253
+mescreen :        ID:  1262
+mescreen :        ID:  1269
+mescreen :        ID:  1270
+mescreen :        ID:  1271
+mescreen :        ID:  1272
+mescreen :        ID:  1273
+mescreen :        ID:  1301
+mescreen :        ID:  1313
+mescreen :        ID:  1324
+mescreen :        ID:  1325
+mescreen :        ID:  1337
+mescreen :        ID:  1338
+mescreen :        ID:  1339
+mescreen :        ID:  1340
+mescreen :        ID:  1341
+mescreen :        ID:  1342
+mescreen :        ID:  1343
+mescreen :        ID:  1344
+mescreen :        ID:  1345
+mescreen :        ID:  1346
+mescreen :        ID:  1347
+mescreen :        ID:  1348
+mescreen :        ID:  1349
+mescreen :        ID:  1350
+mescreen :        ID:  1373
+mescreen :        ID:  1376
+mescreen :        ID:  1377
+mescreen :        ID:  1378
+mescreen :        ID:  1380
+mescreen :        ID:  1381
+mescreen :        ID:  1402
+mescreen :        ID:  1403
+mescreen :        ID:  1404
+mescreen :        ID:  1405
+mescreen :        ID:  1406
+mescreen :        ID:  1407
+mescreen :        ID:  1440
+mescreen :        ID:  1441
+mescreen :        ID:  1471
+mescreen :        ID:  1484
+mescreen :        ID:  1485
+mescreen :        ID:  1488
+mescreen :        ID:  1491
+mescreen :        ID:  1492
+mescreen :        ID:  1496
+mescreen :        ID:  1497
+mescreen :        ID:  1498
+mescreen :        ID:  1499
+mescreen :        ID:  1500
+mescreen :        ID:  1501
+mescreen :        ID:  1502
+mescreen :        ID:  1503
+mescreen :        ID:  1504
+mescreen :        ID:  1505
+mescreen :        ID:  1506
+mescreen :        ID:  1507
+mescreen :        ID:  1508
+mescreen :        ID:  1509
+mescreen :        ID:  1510
+mescreen :        ID:  1530
+mescreen :        ID:  1532
+mescreen :        ID:  1533
+mescreen :        ID:  1534
+mescreen :        ID:  1535
+mescreen :        ID:  1550
+mescreen :        ID:  1551
+mescreen :        ID:  1556
+mescreen :        ID:  1557
+mescreen :        ID:  1558
+mescreen :        ID:  1559
+mescreen :        ID:  1563
+mescreen :        ID:  1564
+mescreen :        ID:  1565
+mescreen :        ID:  1566
+mescreen :        ID:  1567
+mescreen :        ID:  1568
+mescreen :        ID:  1569
+mescreen :        ID:  1575
+mescreen :        ID:  1599
+mescreen :        ID:  1600
+mescreen :        ID:  1601
+mescreen :        ID:  1602
+mescreen :        ID:  1603
+mescreen :        ID:  1605
+mescreen :        ID:  1628
+mescreen :        ID:  1629
+mescreen :        ID:  1630
+mescreen :        ID:  1631
+mescreen :        ID:  1632
+mescreen :        ID:  1633
+mescreen :        ID:  1634
+mescreen :        ID:  1635
+mescreen :        ID:  1636
+mescreen :        ID:  1637
+mescreen :        ID:  1638
+mescreen :        ID:  1639
+mescreen :        ID:  1645
+mescreen :        ID:  1654
+mescreen :        ID:  1655
+mescreen :        ID:  1666
+mescreen :        ID:  1667
+mescreen :        ID:  1668
+mescreen :        ID:  1669
+mescreen :        ID:  1670
+mescreen :        ID:  1671
+mescreen :        ID:  1678
+mescreen :        ID:  1679
+mescreen :        ID:  1680
+mescreen :        ID:  1681
+mescreen :        ID:  1692
+mescreen :        ID:  1693
+mescreen :        ID:  1694
+mescreen :        ID:  1695
+mescreen :        ID:  1696
+mescreen :        ID:  1697
+mescreen :        ID:  1700
+mescreen :        ID:  1701
+mescreen :        ID:  1702
+mescreen :        ID:  1703
+mescreen :        ID:  1708
+mescreen :        ID:  1709
+mescreen :        ID:  1716
+mescreen :        ID:  1717
+mescreen :        ID:  1724
+mescreen :        ID:  1725
+mescreen :        ID:  1726
+mescreen :        ID:  1727
+mescreen : Warm detector List:
+mescreen : Cold detector List:
+[####################################################################################################][100%]
+mescreen : MEScreen task: 
+mescreen : Detector ID &#39;0&#39; has event number :30675
+mescreen : Detector ID &#39;1&#39; has event number :47373
+mescreen : Detector ID &#39;2&#39; has event number :51318
+mescreen : Detector ID &#39;3&#39; has event number :48772
+mescreen : Detector ID &#39;4&#39; has event number :52885
+mescreen : Detector ID &#39;5&#39; has event number :38759
+mescreen : Detector ID &#39;7&#39; has event number :37019
+mescreen : Detector ID &#39;10&#39; has event number :20294
+mescreen : Detector ID &#39;12&#39; has event number :44241
+mescreen : Detector ID &#39;13&#39; has event number :43148
+mescreen : Detector ID &#39;14&#39; has event number :43662
+mescreen : Detector ID &#39;15&#39; has event number :43319
+mescreen : Detector ID &#39;16&#39; has event number :54026
+mescreen : Detector ID &#39;17&#39; has event number :48136
+mescreen : Detector ID &#39;18&#39; has event number :51227
+mescreen : Detector ID &#39;19&#39; has event number :35722
+mescreen : Detector ID &#39;20&#39; has event number :27600
+mescreen : Detector ID &#39;21&#39; has event number :32631
+mescreen : Detector ID &#39;22&#39; has event number :61240
+mescreen : Detector ID &#39;23&#39; has event number :46398
+mescreen : Detector ID &#39;25&#39; has event number :40195
+mescreen : Detector ID &#39;28&#39; has event number :20764
+mescreen : Detector ID &#39;30&#39; has event number :45648
+mescreen : Detector ID &#39;31&#39; has event number :43725
+mescreen : Detector ID &#39;32&#39; has event number :44863
+mescreen : Detector ID &#39;33&#39; has event number :39311
+mescreen : Detector ID &#39;34&#39; has event number :55417
+mescreen : Detector ID &#39;35&#39; has event number :38908
+mescreen : Detector ID &#39;36&#39; has event number :50348
+mescreen : Detector ID &#39;37&#39; has event number :47177
+mescreen : Detector ID &#39;38&#39; has event number :55720
+mescreen : Detector ID &#39;39&#39; has event number :39621
+mescreen : Detector ID &#39;40&#39; has event number :53197
+mescreen : Detector ID &#39;41&#39; has event number :37581
+mescreen : Detector ID &#39;43&#39; has event number :30158
+mescreen : Detector ID &#39;46&#39; has event number :15863
+mescreen : Detector ID &#39;48&#39; has event number :34944
+mescreen : Detector ID &#39;49&#39; has event number :38754
+mescreen : Detector ID &#39;50&#39; has event number :34069
+mescreen : Detector ID &#39;51&#39; has event number :29080
+mescreen : Detector ID &#39;52&#39; has event number :30090
+mescreen : Detector ID &#39;53&#39; has event number :24733
+mescreen : HXMT ME task, mescreen is running successfully!
+mescreen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="mespecgen">mespecgen<a class="anchor-link" href="#mespecgen">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>mespecgen <span class="nv">evtfile</span><span class="o">=</span>./data/ME/me_screen.fits <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_spec <span class="nv">deadfile</span><span class="o">=</span>./data/ME/me_dtime.fits <span class="nv">userdetid</span><span class="o">=</span><span class="s2">&quot;0-5,7,12-23,25,30-41,43,48-53&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>mespecgen : HXMT ME task, mespecgen is running
+mespecgen : mespecgen: User detector selection:
+[####################################################################################################][100%]
+mespecgen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+mespecgen : PILParSet Warning: the file ./data/ME/me_spec_g0_0-53.pha will be overwritten!
+mespecgen : HXMT ME task, mespecgen is running successfully!
+mespecgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/ME/me_spec* 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/ME/me_spec_g0_0-53.pha
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="merspgen">merspgen<a class="anchor-link" href="#merspgen">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>merspgen <span class="nv">phafile</span><span class="o">=</span>./data/ME/me_spec_g0_0-53.pha <span class="nv">outfile</span><span class="o">=</span>./data/ME/me_rsp.fits <span class="nv">attfile</span><span class="o">=</span>./data/ACS/HXMT_P010129900101_Att_FFFFFF_V1_L1P.FITS <span class="nv">ra</span><span class="o">=</span>-1 <span class="nv">dec</span><span class="o">=</span>-91 <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>merspgen : HXMT ME task, merspgen is running
+merspgen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+merspgen : PILParSet Warning: the file ./data/ME/me_rsp.fits will be overwritten!
+merspgen : MERspGen: detector id &#39;0&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;0&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;0&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;1&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;1&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;1&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;2&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;2&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;2&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;3&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;3&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;3&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;4&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;4&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;4&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;5&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;5&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;5&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;7&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;7&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;7&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;12&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;12&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;12&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;13&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;13&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;13&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;14&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;14&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;14&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;15&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;15&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;15&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;16&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;16&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;16&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;17&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;17&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;17&#39;  is 0.979575 !
+merspgen : MERspGen: detector id &#39;18&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;18&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;18&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;19&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;19&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;19&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;20&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;20&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;20&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;21&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;21&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;21&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;22&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;22&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;22&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;23&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;23&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;23&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;25&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;25&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;25&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;30&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;30&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;30&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;31&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;31&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;31&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;32&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;32&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;32&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;33&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;33&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;33&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;34&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;34&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;34&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;35&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;35&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;35&#39;  is 0.992004 !
+merspgen : MERspGen: detector id &#39;36&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;36&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;36&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;37&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;37&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;37&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;38&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;38&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;38&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;39&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;39&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;39&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;40&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;40&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;40&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;41&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;41&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;41&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;43&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;43&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;43&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;48&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;48&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;48&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;49&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;49&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;49&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;50&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;50&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;50&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;51&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;51&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;51&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;52&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;52&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;52&#39;  is 0.97818 !
+merspgen : MERspGen: detector id &#39;53&#39; will use common ARF!
+merspgen : MERspGen: detector id &#39;53&#39; will use common RMF!
+merspgen : MERspGen: Attitude and Alignment correction of detector &#39;53&#39;  is 0.97818 !
+merspgen : HXMT ME task, merspgen is running successfully!
+merspgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/ME/me_rsp.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/ME/me_rsp.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#20302;&#33021;&#36733;&#33655;(LE)&#25968;&#25454;&#22788;&#29702;">&#20302;&#33021;&#36733;&#33655;(LE)&#25968;&#25454;&#22788;&#29702;<a class="anchor-link" href="#&#20302;&#33021;&#36733;&#33655;(LE)&#25968;&#25454;&#22788;&#29702;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lepical">lepical<a class="anchor-link" href="#lepical">&#182;</a></h3><p>LE 探测器的 Pulse Invariance CALibration</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>lepical <span class="nv">evtfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-Evt_FFFFFF_V1_L1P.FITS <span class="nv">tempfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-TH_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_pi.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lepical : ##############################################
+lepical : HXMT LE task, lepical is running
+[####################################################################################################][100%]
+lepical : HXMT LE task, lepical is running successfully!
+lepical : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>产生了一个命名为 le_pi.fits 的事例文件。可以查看新产生的文件</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls ./data/LE/le_pi.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/LE/le_pi.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>lerecon <span class="nv">evtfile</span><span class="o">=</span>./data/LE/le_pi.fits <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_recon.fits <span class="nv">instatusfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-InsStat_FFFFFF_V1_L1P.FITS
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lerecon : ##############################################
+lerecon : HXMT LE task, lerecon is running
+lerecon : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+lerecon : PILParSet Warning: the file ./data/LE/le_recon.fits will be overwritten!
+[####################################################################################################][100%]
+lerecon : HXMT LE task, lerecon is running successfully!
+lerecon : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>legtigen <span class="nv">evtfile</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="nv">instatusfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-InsStat_FFFFFF_V1_L1P.FITS <span class="nv">tempfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-TH_FFFFFF_V1_L1P.FITS <span class="nv">ehkfile</span><span class="o">=</span>./data/AUX/HXMT_P010129900101_HE-EHK_FFFFFF_V1_L1P.FITS <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_gti.fits <span class="nv">defaultexpr</span><span class="o">=</span><span class="s2">&quot;NONE&quot;</span> <span class="nv">expr</span><span class="o">=</span><span class="s2">&quot;ELV&gt;10&amp;&amp;COR&gt;8&amp;&amp;DYE_ELV&gt;40&amp;&amp;T_SAA&gt;=300&amp;&amp;TN_SAA&gt;=300&amp;&amp;ANG_DIST&lt;=0.04&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>legtigen : ##############################################
+legtigen : HXMT LE task, legtigen is running
+legtigen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+legtigen : PILParSet Warning: the file ./data/LE/le_gti.fits will be overwritten!
+legtigen : legtigen: Warning: Unable to get &#39;EVENT&#39; file! GTI from Noise Events(1000/500) is set to NULL!
+legtigen : HXMT LE task, legtigen is running successfully!
+legtigen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>python ./hxmt_scripts/legti.py ./data/LE/le_recon.fits ./data/LE/le_gti.fits ./data/LE/le_gti_new.fits
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(&#39;----------&#39;, &#39;import end&#39;, &#39;----------&#39;)
+*********************************************************
+*********************************************************
+*********************************************************
+************ PRINT: legti -h for usage   *************
+*********************************************************
+(array([1.78432393e+08, 1.78433360e+08, 1.78433467e+08, 1.78438215e+08,
+       1.78439115e+08, 1.78444099e+08]), array([1.78433299e+08, 1.78433419e+08, 1.78433780e+08, 1.78439097e+08,
+       1.78439462e+08, 1.78444844e+08]))
+chooseing the gradedata in the input gtifile
+(&#39;factor===&#39;, 3.411764705882353)
+find the bad data
+(&#39;cri1=&#39;, 8.763341985613465)
+(&#39;loop1&#39;, &#39;median=&#39;, 0.6014705882352924, &#39;Dmedian=&#39;, 999999.3985294118)
+(&#39;cri1=&#39;, 5.573550902859161)
+(&#39;loop2&#39;, &#39;median=&#39;, 0.47156862745097783, &#39;Dmedian=&#39;, 0.1299019607843146)
+(&#39;cri1=&#39;, 5.552705605613449)
+(&#39;loop3&#39;, &#39;median=&#39;, 0.4580882352941176, &#39;Dmedian=&#39;, 0.013480392156860255)
+(&#39;cri1=&#39;, 5.552705605613449)
+(&#39;loop4&#39;, &#39;median=&#39;, 0.4580882352941176, &#39;Dmedian=&#39;, 0.0)
+[ 64. 102.  19.  13.  10. 173.  43. 412.   7.  51. 144.   1. 147.  17.
+  16. 223.  24.  43. 116. 317.  31. 104.   5.  36. 112.  10.  37.  61.
+ 320.   4. 114.]
+create new gtifile
+[-18.  53. 292.  24.  27. 103.  -4. 197. -16.  -8. 200.  -6.]
+done
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls -1 ./data/LE/le_gti*
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>./data/LE/le_gti.fits
+./data/LE/le_gti_new.fits
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>lescreen <span class="nv">evtfile</span><span class="o">=</span>./data/LE/le_recon.fits <span class="nv">gtifile</span><span class="o">=</span>./data/LE/le_gti_new.fits <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_screen.fits <span class="nv">userdetid</span><span class="o">=</span><span class="s2">&quot;0,2-4,6-10,12,14,20,22-26,28,30,32,34-36,38-42,44,46,52,54-58,60-62,64,66-68,70-74,76,78,84,86,88-90,92-94,13,45,77,21,53,85&quot;</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lescreen : ##############################################
+lescreen : HXMT LE task, lescreen is running
+lescreen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+lescreen : PILParSet Warning: the file ./data/LE/le_screen.fits will be overwritten!
+lescreen : lescreen: User detector selection:
+lescreen : HxmtBadDetector Info: there is no bad detector!
+[####################################################################################################][100%]
+lescreen : LEScreen task: 
+lescreen : Detector ID &#39;0&#39; has event number :12719
+lescreen : Detector ID &#39;2&#39; has event number :12532
+lescreen : Detector ID &#39;3&#39; has event number :12544
+lescreen : Detector ID &#39;4&#39; has event number :12456
+lescreen : Detector ID &#39;6&#39; has event number :12481
+lescreen : Detector ID &#39;7&#39; has event number :12497
+lescreen : Detector ID &#39;8&#39; has event number :12744
+lescreen : Detector ID &#39;9&#39; has event number :12915
+lescreen : Detector ID &#39;10&#39; has event number :12257
+lescreen : Detector ID &#39;12&#39; has event number :12882
+lescreen : Detector ID &#39;13&#39; has event number :145
+lescreen : Detector ID &#39;14&#39; has event number :12100
+lescreen : Detector ID &#39;20&#39; has event number :12532
+lescreen : Detector ID &#39;21&#39; has event number :959
+lescreen : Detector ID &#39;22&#39; has event number :12607
+lescreen : Detector ID &#39;23&#39; has event number :12781
+lescreen : Detector ID &#39;24&#39; has event number :12978
+lescreen : Detector ID &#39;25&#39; has event number :12397
+lescreen : Detector ID &#39;26&#39; has event number :12396
+lescreen : Detector ID &#39;28&#39; has event number :12768
+lescreen : Detector ID &#39;30&#39; has event number :12464
+lescreen : Detector ID &#39;32&#39; has event number :12612
+lescreen : Detector ID &#39;34&#39; has event number :12174
+lescreen : Detector ID &#39;35&#39; has event number :12420
+lescreen : Detector ID &#39;36&#39; has event number :12779
+lescreen : Detector ID &#39;38&#39; has event number :12511
+lescreen : Detector ID &#39;39&#39; has event number :12811
+lescreen : Detector ID &#39;40&#39; has event number :11972
+lescreen : Detector ID &#39;41&#39; has event number :12596
+lescreen : Detector ID &#39;42&#39; has event number :12448
+lescreen : Detector ID &#39;44&#39; has event number :12345
+lescreen : Detector ID &#39;45&#39; has event number :120
+lescreen : Detector ID &#39;46&#39; has event number :12678
+lescreen : Detector ID &#39;52&#39; has event number :12261
+lescreen : Detector ID &#39;53&#39; has event number :728
+lescreen : Detector ID &#39;54&#39; has event number :12406
+lescreen : Detector ID &#39;55&#39; has event number :12387
+lescreen : Detector ID &#39;56&#39; has event number :12638
+lescreen : Detector ID &#39;57&#39; has event number :12625
+lescreen : Detector ID &#39;58&#39; has event number :12919
+lescreen : Detector ID &#39;60&#39; has event number :12322
+lescreen : Detector ID &#39;61&#39; has event number :12595
+lescreen : Detector ID &#39;62&#39; has event number :12567
+lescreen : Detector ID &#39;64&#39; has event number :12215
+lescreen : Detector ID &#39;66&#39; has event number :12423
+lescreen : Detector ID &#39;67&#39; has event number :12471
+lescreen : Detector ID &#39;68&#39; has event number :12444
+lescreen : Detector ID &#39;70&#39; has event number :12580
+lescreen : Detector ID &#39;71&#39; has event number :12196
+lescreen : Detector ID &#39;72&#39; has event number :12130
+lescreen : Detector ID &#39;73&#39; has event number :12176
+lescreen : Detector ID &#39;74&#39; has event number :12307
+lescreen : Detector ID &#39;76&#39; has event number :12267
+lescreen : Detector ID &#39;77&#39; has event number :147
+lescreen : Detector ID &#39;78&#39; has event number :12664
+lescreen : Detector ID &#39;84&#39; has event number :12140
+lescreen : Detector ID &#39;85&#39; has event number :811
+lescreen : Detector ID &#39;86&#39; has event number :12388
+lescreen : Detector ID &#39;88&#39; has event number :11913
+lescreen : Detector ID &#39;89&#39; has event number :12449
+lescreen : Detector ID &#39;90&#39; has event number :12552
+lescreen : Detector ID &#39;92&#39; has event number :12339
+lescreen : Detector ID &#39;93&#39; has event number :12333
+lescreen : Detector ID &#39;94&#39; has event number :12142
+lescreen : HXMT LE task, lescreen is running successfully!
+lescreen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>lespecgen <span class="nv">evtfile</span><span class="o">=</span>./data/LE/le_screen.fits <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_spec <span class="nv">userdetid</span><span class="o">=</span><span class="s2">&quot;0,2-4,6-10,12,14,20,22-26,28,30,32,34-36,38-42,44,46,52,54-58,60-62,64,66-68,70-74,76,78,84,86,88-90,92-94&quot;</span> <span class="nv">eventtype</span><span class="o">=</span><span class="m">1</span> <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lespecgen : HXMT LE task, lespecgen is running
+[####################################################################################################][100%]
+lespecgen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+lespecgen : PILParSet Warning: the file ./data/LE/le_spec_g0_0-94.pha will be overwritten!
+lespecgen : HXMT LE task, lespecgen is running successfully!
+lespecgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>lerspgen <span class="nv">phafile</span><span class="o">=</span>./data/LE/le_spec_g0_0-94.pha <span class="nv">outfile</span><span class="o">=</span>./data/LE/le_rsp.fits <span class="nv">attfile</span><span class="o">=</span>./data/ACS/HXMT_P010129900101_Att_FFFFFF_V1_L1P.FITS <span class="nv">tempfile</span><span class="o">=</span>./data/LE/HXMT_P010129900101_LE-TH_FFFFFF_V1_L1P.FITS <span class="nv">ra</span><span class="o">=</span>-1 <span class="nv">dec</span><span class="o">=</span>-91 <span class="nv">clobber</span><span class="o">=</span>yes
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>lerspgen : HXMT LE task, lerspgen is running
+lerspgen : PILParSet Warning: parameter &#39;clobber&#39; set to yes!
+lerspgen : PILParSet Warning: the file ./data/LE/le_rsp.fits will be overwritten!
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;0&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;2&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;3&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;4&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;6&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;7&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;8&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;9&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;10&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;12&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;14&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;20&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;22&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;23&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;24&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;25&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;26&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;28&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;30&#39;  is 0.993464 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;32&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;34&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;35&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;36&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;38&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;39&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;40&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;41&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;42&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;44&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;46&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;52&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;54&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;55&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;56&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;57&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;58&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;60&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;61&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;62&#39;  is 0.997275 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;64&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;66&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;67&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;68&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;70&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;71&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;72&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;73&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;74&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;76&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;78&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;84&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;86&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;88&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;89&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;90&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;92&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;93&#39;  is 0.993867 !
+lerspgen : LERspGen: Attitude and Alignment correction of detector &#39;94&#39;  is 0.993867 !
+lerspgen : HXMT LE task, lerspgen is running successfully!
+lerspgen : ##############################################
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>python -m pip install --index-url https://test.pypi.org/simple/ --no-deps hxmt-analysis-demo</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">hxmt_scripts.create_HE_specfile</span> <span class="k">import</span> <span class="n">create_HE_specfile</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#33021;&#35889;&#20998;&#26512;">&#33021;&#35889;&#20998;&#26512;<a class="anchor-link" href="#&#33021;&#35889;&#20998;&#26512;">&#182;</a></h2>
 </div>
 </div>
 </div>
