@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="hxmt_analysis_demo",
-    version="0.0.3",
+    version="0.1.0",
     author="Youli Tuo",
     author_email="tuoyl@ihep.ac.cn",
     description="a package for hxmt analysis",
